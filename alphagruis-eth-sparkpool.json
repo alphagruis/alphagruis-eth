@@ -1,0 +1,336 @@
+/*
+//
+// MARK: [ETH] sparkpool
+// <https://help.sparkpool.com/hc/kb/article/1413416/?lang=en>
+//
+// cn.sparkpool.com
+// asia.sparkpool.com
+// eth-eu.sparkpool.com
+// eth-us.sparkpool.com
+//
+// REPLACE %WORKER% with your rig name,
+// REPLACE ALL %WALLET_ETH% with your ETH wallet address,
+// alternatively, create and use environment variables.
+//
+// Sort the connections by prioritizing the servers closest to you.
+//
+*/
+
+{
+    // [optional]
+    "fLogFile": 1,
+
+    // [optional]
+    "fColors": 1,
+
+    // [required]
+    "fWorker": "%WORKER%",
+
+    // [required]
+    "fStratumAddressArray":
+    [
+        //
+        // [ETH] sparkpool, nonSSL: 3333, nonSSL: 13333
+        //
+
+        {
+            // [required]
+            "fStratumMode": 0,
+
+            // [required]
+            "fWallet": "%WALLET_ETH%",
+
+            // [optional]
+            "fPassword": "",
+
+            // [required]
+            "fSocketAddressName": "cn.sparkpool.com",
+
+            // [required]
+            "fServerPort": 3333,
+
+            // [optional]
+            "fSSL": 0
+        },
+
+        {
+            // [required]
+            "fStratumMode": 0,
+
+            // [required]
+            "fWallet": "%WALLET_ETH%",
+
+            // [optional]
+            "fPassword": "",
+
+            // [required]
+            "fSocketAddressName": "cn.sparkpool.com",
+
+            // [required]
+            "fServerPort": 13333,
+
+            // [optional]
+            "fSSL": 0
+        },
+
+        {
+            // [required]
+            "fStratumMode": 0,
+
+            // [required]
+            "fWallet": "%WALLET_ETH%",
+
+            // [optional]
+            "fPassword": "",
+
+            // [required]
+            "fSocketAddressName": "asia.sparkpool.com",
+
+            // [required]
+            "fServerPort": 3333,
+
+            // [optional]
+            "fSSL": 0
+        },
+
+        {
+            // [required]
+            "fStratumMode": 0,
+
+            // [required]
+            "fWallet": "%WALLET_ETH%",
+
+            // [optional]
+            "fPassword": "",
+
+            // [required]
+            "fSocketAddressName": "asia.sparkpool.com",
+
+            // [required]
+            "fServerPort": 13333,
+
+            // [optional]
+            "fSSL": 0
+        },
+
+        {
+            // [required]
+            "fStratumMode": 0,
+
+            // [required]
+            "fWallet": "%WALLET_ETH%",
+
+            // [optional]
+            "fPassword": "",
+
+            // [required]
+            "fSocketAddressName": "eth-eu.sparkpool.com",
+
+            // [required]
+            "fServerPort": 3333,
+
+            // [optional]
+            "fSSL": 0
+        },
+
+        {
+            // [required]
+            "fStratumMode": 0,
+
+            // [required]
+            "fWallet": "%WALLET_ETH%",
+
+            // [optional]
+            "fPassword": "",
+
+            // [required]
+            "fSocketAddressName": "eth-eu.sparkpool.com",
+
+            // [required]
+            "fServerPort": 13333,
+
+            // [optional]
+            "fSSL": 0
+        },
+
+        {
+            // [required]
+            "fStratumMode": 0,
+
+            // [required]
+            "fWallet": "%WALLET_ETH%",
+
+            // [optional]
+            "fPassword": "",
+
+            // [required]
+            "fSocketAddressName": "eth-us.sparkpool.com",
+
+            // [required]
+            "fServerPort": 3333,
+
+            // [optional]
+            "fSSL": 0
+        },
+
+        {
+            // [required]
+            "fStratumMode": 0,
+
+            // [required]
+            "fWallet": "%WALLET_ETH%",
+
+            // [optional]
+            "fPassword": "",
+
+            // [required]
+            "fSocketAddressName": "eth-us.sparkpool.com",
+
+            // [required]
+            "fServerPort": 13333,
+
+            // [optional]
+            "fSSL": 0
+        }
+    ],
+
+    // [optional]
+    "fMinerSettingsArray":
+    [
+        //
+        // AMD
+        //
+
+        {
+            // [required] OpenCL: 1
+            "fPlatformType": 1,
+
+            // [required] AMD: 1
+            "fDeviceType": 1,
+
+            //
+            // Uncomment this block (removing /* */) always and only after setting the parameters correctly.
+            //
+            
+        /*
+            // [optional]
+            "fDeviceOverclockSettings":
+            {
+                // [optional] unit: percentage, expressed in RELATIVE value.
+                "fPowerLimit": 0,
+
+                // [optional] unit: celsius, expressed in ABSOLUTE value.
+                "fTemperatureLimit": 70,
+
+                // [optional] unit: [MHz, mV] or MHz, expressed in ABSOLUTE value.
+                "fClockGraphics": [1600, 900],
+
+                // [optional] unit: [MHz, mV] or MHz, expressed in ABSOLUTE value.
+                "fClockMemory": [2150, 900],
+
+                // [optional] unit: natural, AMD only.
+                "fMemoryTimingLevel": 2,
+
+                // [optional] unit: percentage, expressed in ABSOLUTE value.
+                "fFanSpeed": 75
+            },
+        */
+        
+            // [optional]
+            "fKernelSettings":
+            {
+                // [optional] default: 2
+                "fComputeDatasetChannels": 2,
+
+                // [optional] default: 128
+                "fComputeDatasetKernelLocalWorkSize": 128,
+
+                // [optional] default: 262144
+                "fComputeDatasetKernelGlobalWorkStep": 262144,
+
+                // [optional] default: 2
+                "fSearchChannels": 2,
+
+                // [optional] default: 128
+                "fEthashSearchKernelLocalWorkSize": 128,
+
+                // [optional] default: 1048576
+                "fEthashSearchKernelGlobalWorkSize": 1048576,
+
+                // [optional] default: 8
+                "fEthashThreadsPerHash": 8
+            }
+        },
+
+        //
+        // NVIDIA
+        //
+
+        {
+            // [required] CUDA: 32
+            "fPlatformType": 32,
+
+            // [required] NVIDIA: 4
+            "fDeviceType": 4,
+
+            //
+            // Uncomment this block (removing /* */) always and only after setting the parameters correctly.
+            //
+            
+        /*
+            // [optional]
+            "fDeviceOverclockSettings":
+            {
+                // [optional] unit: percentage, expressed in ABSOLUTE value.
+                "fPowerLimit": 50,
+
+                // [optional] unit: celsius, expressed in ABSOLUTE value.
+                "fTemperatureLimit": 70,
+
+                // [optional] unit: MHz, expressed in RELATIVE value.
+                "fClockGraphics": 0,
+
+                // [optional] unit: MHz, expressed in RELATIVE value.
+                "fClockMemory": 800,
+
+                // [optional] unit: percentage, expressed in ABSOLUTE value.
+                "fFanSpeed": 75
+            },
+        */
+        
+            // [optional]
+            "fKernelSettings":
+            {
+                // [optional] default: 2
+                "fComputeDatasetChannels": 2,
+
+                // [optional] default: 128
+                "fComputeDatasetKernelLocalWorkSize": 128,
+
+                // [optional] default: 0, CUDA only.
+                "fComputeDatasetKernelMinBlocksPerMultiprocessor": 0,
+
+                // [optional] default: 262144
+                "fComputeDatasetKernelGlobalWorkStep": 262144,
+
+                // [optional] default: 2
+                "fSearchChannels": 2,
+
+                // [optional] default: 128
+                "fEthashSearchKernelLocalWorkSize": 128,
+
+                // [optional] default: 0, CUDA only.
+                "fEthashSearchKernelMinBlocksPerMultiprocessor": 0,
+
+                // [optional] default: 1048576
+                "fEthashSearchKernelGlobalWorkSize": 1048576,
+
+                // [optional] default: 4
+                "fEthashThreadsPerHash": 4,
+
+                // [optional] default: 0
+                "fMaximumAmountOfRegisters": 0
+            }
+        }
+    ]
+}
