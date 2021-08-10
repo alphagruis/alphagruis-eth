@@ -1,6 +1,6 @@
 <p align="center">
-  <img width="128" height="128" src="https://github.com/alphagruis/alphagruis-eth/blob/main/alphagruis-eth.svg">
-  <img width="128" height="128" src="https://github.com/alphagruis/alphagruis-eth/blob/main/alphagruis-eth-logo.svg">
+  <img width="128" height="128" src="alphagruis-eth.svg">
+  <img width="128" height="128" src="alphagruis-eth-logo.svg">
 </p>
 
 # :small_orange_diamond: alphagruis's Miner for Ethereum
@@ -787,7 +787,7 @@ The virtual memory size must be adjusted upwards according to the current DAG si
 
 ## License
 
-**alphagruis**'s Miner for **Ethereum** is licensed under the terms of the [BSD 3-Clause License](https://github.com/alphagruis/alphagruis-eth/blob/main/LICENSE.txt). *alphagruis*, the *alphagruis logo* and the *alphagruis avatar picture* are trademarks of **alphagruis**. All other product names, trademarks or company names, not attributable to **alphagruis**, are used solely for identification and belong to their respective owners.
+**alphagruis**'s Miner for **Ethereum** is licensed under the terms of the [BSD 3-Clause License](LICENSE.txt). *alphagruis*, the *alphagruis logo* and the *alphagruis avatar picture* are trademarks of **alphagruis**. All other product names, trademarks or company names, not attributable to **alphagruis**, are used solely for identification and belong to their respective owners.
 
 [Releases]: https://github.com/alphagruis/alphagruis-eth/releases
 
